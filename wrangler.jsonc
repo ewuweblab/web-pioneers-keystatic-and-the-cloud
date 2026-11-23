@@ -1,0 +1,11 @@
+{
+	"name": "the-client",
+	"compatibility_date": "2026-10-15",
+	"assets": {
+		"directory": "./dist",
+		"not_found_handling": "404-page",
+		// Browser page loads that match no file get the 404 page without
+		// reaching the Worker, so send Keystatic's routes to the Worker first
+		"run_worker_first": ["/keystatic", "/keystatic/*", "/api/keystatic/*"]
+	}
+}
